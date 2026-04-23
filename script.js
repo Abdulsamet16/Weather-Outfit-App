@@ -43,18 +43,18 @@ function displayWeather(data) {
 }
 
 function getOutfit(temp) {
-  if (temp < 5) return "Mont + atkı 🧥";
-  if (temp < 15) return "Ceket 🧥";
+  if (temp < 5) return "Coat + Scarf 🧥";
+  if (temp < 15) return "Jacket 🧥";
   if (temp < 25) return "T-shirt 👕";
-  return "Şort + tişört 🩳";
+  return "Shorts + T-shirt 🩳";
 }
 
 function extraAdvice(weather) {
   const w = weather.toLowerCase();
 
-  if (w.includes("rain")) return "☔ Şemsiye almayı unutma!";
-  if (w.includes("snow")) return "❄️ Kalın giyin, kar var!";
-  if (w.includes("clear")) return "😎 Güneşli, keyfini çıkar!";
+  if (w.includes("rain")) return "☔ Don't forget your umbrella!";
+  if (w.includes("snow")) return "❄️ Dress warmly, there's snow!";
+  if (w.includes("clear")) return "😎 It's sunny, enjoy it!";
   
   return "";
 } 
