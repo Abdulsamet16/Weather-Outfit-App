@@ -6,15 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>🌦️ Weather App</h1>
 
-  <h1>🌦️ Weather & Outfit Suggestion</h1>
+    <input type="text" id="cityInput" placeholder="Enter city">
+    <br>
+    <button onclick="getWeather()">Search</button>
+    <button onclick="getLocationWeather()">📍 Location</button>
 
-  <input type="text" id="cityInput" placeholder="Enter city">
-  <button onclick="getWeather()">Get Weather</button>
-  <button onclick="getLocationWeather()">📍 Use My Location</button>
-
-  <div id="result"></div>
-
-  <script src="script.js"></script>
+    <div id="result"></div>
+  </div>
 </body>
 </html>

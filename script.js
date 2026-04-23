@@ -75,4 +75,3 @@ function getLocationWeather() {
       });
   });
 }
-<button onclick="getLocationWeather()">📍 Use My Location</button>
