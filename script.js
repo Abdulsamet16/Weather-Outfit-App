@@ -64,16 +64,20 @@ function getLocationWeather() {
     return;
   }
 
-  navigator.geolocation.getCurrentPosition(position => {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
-      .then(res => res.json())
-      .then(data => {
-        displayWeather(data);
-      });
-  });
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+        .then(res => res.json())
+        .then(data => displayWeather(data));
+    },
+    (error) => {
+      alert("Location permission denied or failed ❌");
+      console.log(error);
+    }
+  );
 }
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
