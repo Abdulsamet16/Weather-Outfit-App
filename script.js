@@ -73,13 +73,8 @@ function getLocationWeather() {
         .then(res => res.json())
         .then(data => displayWeather(data));
     },
-    (error) => {
-  console.log("GEO ERROR:", error);
-
-  alert(
-    "Error: " + error.message +
-    "\nCode: " + error.code
-  );
+  (error) => {
+  alert("Location permission denied or failed ❌");
 }
   );
 }
