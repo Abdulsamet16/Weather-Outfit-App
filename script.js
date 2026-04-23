@@ -74,9 +74,13 @@ function getLocationWeather() {
         .then(data => displayWeather(data));
     },
     (error) => {
-      alert("Location permission denied or failed ❌");
-      console.log(error);
-    }
+  console.log("GEO ERROR:", error);
+
+  alert(
+    "Error: " + error.message +
+    "\nCode: " + error.code
+  );
+}
   );
 }
 function toggleDarkMode() {
