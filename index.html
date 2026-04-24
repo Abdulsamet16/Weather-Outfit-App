@@ -10,19 +10,27 @@
 
 <body>
 
-  <div class="container">
-    <h1>🌦️ Weather App</h1>
-
-    <input type="text" id="cityInput" placeholder="Enter city">
-    <br>
-    <div class="button-group">
-      <button onclick="getWeather()">Search</button>
-      <button onclick="getLocationWeather()">📍 Location</button>
-      <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
-    </div>
-
-    <div id="result"></div>
+ <div class="container">
+  <div class="app-header">
+    <div class="weather-icon-wrap">🌦️</div>
+    <h1>Weather App</h1>
+    <p class="subtitle">Real-time weather at your fingertips</p>
   </div>
+
+  <div class="input-wrap">
+    <span class="input-icon">🔍</span>
+    <input type="text" id="cityInput" placeholder="Search city...">
+  </div>
+
+  <div class="button-group">
+    <button class="btn-primary" onclick="getWeather()">Search Weather</button>
+    <div class="divider"><span>or</span></div>
+    <button class="btn-secondary" onclick="getLocationWeather()"> Use my location</button>
+    <button class="btn-ghost" onclick="toggleDarkMode()"> Toggle dark mode</button>
+  </div>
+
+  <div id="weather-card"></div>
+</div>
 
   <script src="script.js"></script>
 </body>
